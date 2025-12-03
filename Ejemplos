@@ -170,3 +170,86 @@ Sin flask
 nombre = input("Nombre: ")
 edad = input("Edad: ")
 print("Hola", nombre, "tienes", edad, "años")
+
+Otro ejemplo (mini bloc)
+
+Html:
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi Página</title>
+</head>
+<body>
+  <h1>Título</h1>
+  <p>Texto</p>
+</body>
+</html>
+
+Css:
+body {
+  background: lightblue;
+  font-family: Arial;
+}
+p {
+  color: red;
+}
+
+Java:
+<script>
+  function sumar() {
+    let a = 5;
+    let b = 3;
+    alert(a + b);
+  }
+</script>
+
+<button onclick="sumar()">Sumar</button>
+
+Otra alternativa:
+public class Main {
+  public static void main(String[] args) {
+    int a = 5;
+    int b = 2;
+    System.out.println(a + b);
+  }
+}
+
+Ejemplo leyendo datos:
+Scanner sc = new Scanner(System.in);
+int x = sc.nextInt();
+
+Python: 
+a = 5
+b = 7
+print(a + b)
+
+Otro ejemplo:
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial; }
+  </style>
+</head>
+
+<body>
+
+<h1>Sumador</h1>
+
+<input id="n1" type="number">
+<input id="n2" type="number">
+
+<button onclick="sumar()">Sumar</button>
+
+<p id="res"></p>
+
+<script>
+  function sumar() {
+    let a = parseInt(document.getElementById("n1").value);
+    let b = parseInt(document.getElementById("n2").value);
+    document.getElementById("res").innerText = "Resultado: " + (a + b);
+  }
+</script>
+
+</body>
+</html>
