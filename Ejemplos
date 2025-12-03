@@ -1,0 +1,172 @@
+(Mostrar un mensaje)
+Java:
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hola");
+    }
+}
+
+Python:
+print("Hola")
+
+(Pedir datos y mostrarlos)
+Java:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nombre: ");
+        String nombre = sc.nextLine();
+
+        System.out.println("Hola " + nombre);
+    }
+}
+
+Python:
+nombre = input("Nombre: ")
+print("Hola", nombre)
+
+(Sumar dos números)
+Java:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        int suma = a + b;
+        System.out.println("Resultado: " + suma);
+    }
+}
+
+Python:
+a = int(input())
+b = int(input())
+print("Resultado:", a + b)
+
+(IF-Condicion)
+Java:
+int edad = 18;
+
+if (edad >= 18) {
+    System.out.println("Mayor");
+} else {
+    System.out.println("Menor");
+}
+
+Python:
+edad = 18
+
+if edad >= 18:
+    print("Mayor")
+else:
+    print("Menor")
+
+(Ciclo for)
+Java:
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+
+Python:
+for i in range(1, 6):
+    print(i)
+
+(Funciones)
+Java:
+public static void saludar() {
+    System.out.println("Hola");
+}
+
+Python:
+def saludar():
+    print("Hola")
+
+Ejemplo Extra para páginas web:
+Html:
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Formulario de Datos</h1>
+
+  <form action="/procesar" method="post">
+    <input type="text" name="nombre" placeholder="Nombre">
+    <input type="number" name="edad" placeholder="Edad">
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>
+
+Css:
+body {
+  font-family: Arial;
+  background: #f3f3f3;
+  text-align: center;
+  padding: 30px;
+}
+
+input, button {
+  margin: 10px;
+  padding: 10px;
+}
+
+Java:
+Con servidor 
+import java.io.IOException;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class Procesar extends HttpServlet {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+
+        String nombre = request.getParameter("nombre");
+        String edad = request.getParameter("edad");
+
+        response.getWriter().println("Hola " + nombre + ", tienes " + edad + " años");
+    }
+}
+Sin servidor:
+public class Main {
+    public static void main(String[] args) {
+        String nombre = "Luis";
+        int edad = 20;
+
+        System.out.println("Hola " + nombre + ", tienes " + edad + " años");
+    }
+}
+
+Python:
+Con flask
+
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route("/procesar", methods=["POST"])
+def procesar():
+    nombre = request.form["nombre"]
+    edad = request.form["edad"]
+    return f"Hola {nombre}, tienes {edad} años"
+
+if __name__ == "__main__":
+    app.run()
+
+Sin flask
+
+nombre = input("Nombre: ")
+edad = input("Edad: ")
+print("Hola", nombre, "tienes", edad, "años")
